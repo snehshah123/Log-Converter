@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(0, 0, 0);
+color:#F0E9D2;
+font: 9pt &quot;Segoe UI&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>14</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Open File&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+text-align:right;
+padding:10px;
+}
+
+QPushButton:hover {
+	background-color: #28a745;
+	border-width:2px;
+	border-radius:5px;
+	border-style:outset;
+	color: rgb(0, 0, 0);
+cursor: pointer;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Open File</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>50</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgba(0, 0, 0, 0);  /* Fully transparent background */
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../NEW/ico.qrc">:/ico/icons/filogo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>40</y>
+      <width>421</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    border: 1px solid white;  /* White border with 2px width */
+    border-radius: 5px;       /* Rounded corners with 5px radius */
+    border-style: outset;     /* Outset border style */
+    font-size: 12px;          /* Font size */
+    font-family: &quot;MS Shell Dlg 2&quot;; /* Font family */
+	color: white
+}
+</string>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="selection" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>130</y>
+      <width>651</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#selection {
+    border: 1px solid rgb(255, 255, 255);  /* Dodger Blue border */
+    border-radius: 5px;         /* Rounded corners */
+    padding: 5px;               /* Padding inside the border */
+ /* Light background color */
+}</string>
+    </property>
+    <widget class="QLineEdit" name="TelemetryData_2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>20</y>
+       <width>311</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-style:outset;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);
+border-width:3px;
+border-radius: 10px;
+border-color: rgb(30, 144, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Date &amp; Time Selection</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="BaudRate_2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>90</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>13</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+color: #ffffff;
+font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>Date</string>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="BaudRate_3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+border-width:5px;
+border-radius: 10px;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>Start :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="BaudRate_5">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>90</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>13</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+color: #ffffff;
+font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>Time</string>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>140</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>14</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QDateEdit{
+    font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+    border: solid rgb(255, 255, 255);
+    border-width: 1px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+QDateEdit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px; /* Width of the dropdown button */
+    border-left: solid #1E90FF; /* Border for the dropdown button */
+    /* background-color: rgb(255, 255, 255); */
+}
+
+QDateEdit::down-arrow {
+    border: none;
+    width: 0;
+    height: 0;
+    border-left: 6px solid;
+    border-right: 6px solid;
+    border-top: 6px solid rgb(255, 255, 255);
+}
+
+/* QCalendarWidget styles */
+QCalendarWidget {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+/* QCalendarWidget navigation bar */
+QCalendarWidget QWidget#qt_calendar_navigationbar {
+    background-color: #1E90FF; /* Background color of the navigation bar */
+}
+
+/* QCalendarWidget header row */
+QCalendarWidget QWidget#qt_calendar_navigationbar QToolButton {
+    color: white; /* Text color of the navigation bar buttons */
+    background-color: #1E90FF; /* Background color of the navigation bar buttons */
+    border: none; /* No border */
+}
+
+QCalendarWidget QToolButton#qt_calendar_prevmonth, 
+QCalendarWidget QToolButton#qt_calendar_nextmonth {
+    border: none;
+    qproperty-icon: none;
+    width: 20px;
+    height: 20px;
+}
+
+QCalendarWidget QToolButton::menu-indicator {
+    width: 0px;
+}
+
+/* QCalendarWidget header row - month and year */
+QCalendarWidget QToolButton#qt_calendar_monthbutton, 
+QCalendarWidget QToolButton#qt_calendar_yearbutton {
+    color: white; /* Text color for month and year */
+    background-color: black; /* Background color for month and year */
+    border: none; /* No border */
+}
+
+/* Ensure the text color is white when these buttons are focused, active, or selected */
+QCalendarWidget QToolButton#qt_calendar_monthbutton:pressed, 
+QCalendarWidget QToolButton#qt_calendar_yearbutton:pressed, 
+QCalendarWidget QToolButton#qt_calendar_monthbutton:focus, 
+QCalendarWidget QToolButton#qt_calendar_yearbutton:focus, 
+QCalendarWidget QToolButton#qt_calendar_monthbutton:checked, 
+QCalendarWidget QToolButton#qt_calendar_yearbutton:checked {
+    color: white; /* Text color for month and year when focused, pressed, or checked */
+}
+
+/* QMenu (dropdown list) styling for the month list */
+QMenu {
+    background-color: #1E90FF; /* Background color of the dropdown menu */
+    color: white; /* Text color of the dropdown menu items */
+    border: 1px solid white;
+}
+
+QMenu::item {
+    background-color: black; /* Background color of each item */
+    color: white; /* Text color of each item */
+}
+
+QMenu::item:selected {
+    color: #1E90FF; /* Text color of the selected item */
+}
+
+/* QCalendarWidget selected date */
+QCalendarWidget QAbstractItemView:enabled {
+    color: blue; /* Text color */
+    selection-background-color: #1E90FF; /* Background color for selected date */
+    selection-color: black; /* Text color for selected date */
+    border: none;
+}
+
+QCalendarWidget QAbstractItemView {
+    outline: 0;
+}
+</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="currentSection">
+      <enum>QDateTimeEdit::DaySection</enum>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QTimeEdit" name="timeEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>140</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>14</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTimeEdit {
+    font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+    border: solid rgb(255, 255, 255);
+    border-width: 1px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+/* Style the up and down buttons */
+QTimeEdit::up-button, QTimeEdit::down-button {
+    width: 20px;
+	border: none;
+    padding-right: 5px;
+	cursor: pointer;
+}
+
+/* Style the up arrow */
+QTimeEdit::up-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid;
+    border-right: 6px solid;
+    border-bottom: 6px solid white; /* Arrow color */
+}
+
+/* Style the down arrow */
+QTimeEdit::down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid;
+    border-right: 6px solid;
+    border-top: 6px solid white; /* Arrow color */
+}
+
+  </string>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="accelerated">
+      <bool>false</bool>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="currentSection">
+      <enum>QDateTimeEdit::HourSection</enum>
+     </property>
+     <property name="displayFormat">
+      <string>HH:mm:ss</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Start_3">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>230</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+padding:10px;
+text-align:right;
+}
+QPushButton:hover {
+	background-color: rgb(40, 167, 69);
+	border-width:2px;
+border-radius:5px;
+border-style:outset;
+border-color: #4caf50;
+	color: rgb(0, 0, 0);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Submit</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>240</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: rgba(0, 0, 0, 0);  /* Fully transparent background */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../NEW/ico.qrc">:/ico/icons/check.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../NEW/ico.qrc"/>
+ </resources>
+ <connections/>
+</ui>
